@@ -51,9 +51,9 @@ def main():
 def cleanurl(url):
     """Check if URL is missing a protocol, if so, add it"""
     if not url.startswith('https://') and not url.startswith('http://'):
-        return "http://" + url
+        return "http://" + url.rstrip('/')
     else:
-        return url
+        return url.rstrip('/')
 
 if __name__ == '__main__':
     main()
